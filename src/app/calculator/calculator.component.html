@@ -1,0 +1,59 @@
+<h1>Online Calculator!</h1> <br />
+<h3>Made by João Victor Olivo</h3> <br />
+<select id="operationOrder">
+    <option value="weighted">Weighted</option>
+    <option value="leftToRight">Left to Right</option>
+</select>
+<label for="places_after_dot_input">Decimal places after the point: </label>
+<input type="number" id="places_after_dot_input" value="14" min="0" max="16" placeholder="Type a Number here" />
+<label for="places_after_dot_input">Not Recommended: 15+ places</label>
+<!--     <input type="checkbox" id="isMouseRanged" onchange="keyboardMouseRanged()" checked/> -->
+
+<form>
+    <fieldset class="calculator">
+        <div class="display">
+            <span id="display_mini_top" style="color:gray">{{displayHistory}}</span>
+            <p id="display_main">{{display}}</p>
+        </div>
+        <div class="calculator_buttons">
+            <div class="calculator_buttons_left">
+                <div class="calculator_buttons_left_top">
+                    <button (click)="inputSpecial('C')" type="button" id="button_C" class="button_active">C</button>
+                    <button (click)="inputSpecial('CE')" type="button" id="button_CE">CE</button>
+                    <button (click)="inputSpecial('e')" type="button" id="button_e">e</button>
+                </div>
+                <div class="numbers">
+                    <div class="numbers_0">
+                        <button (click)="inputNumber(0)" type="button" id="button_0" class="button_active">0</button>
+                        <button (click)="inputSpecial('.')" type="button" id="button_dot"
+                            class="button_active">.</button>
+                        <button (click)="inputSpecial('=')" type="button" id="button_equal"
+                            class="button_active">=</button>
+                    </div>
+                    <div class="numbers_1to3">
+                        <button (click)="inputNumber(1)" type="button" id="button_1" class="button_active">1</button>
+                        <button (click)="inputNumber(2)" type="button" id="button_2" class="button_active">2</button>
+                        <button (click)="inputNumber(3)" type="button" id="button_3" class="button_active">3</button>
+                    </div>
+                    <div class="numbers_4to6">
+                        <button (click)="inputNumber(4)" type="button" id="button_4" class="button_active">4</button>
+                        <button (click)="inputNumber(5)" type="button" id="button_5" class="button_active">5</button>
+                        <button (click)="inputNumber(6)" type="button" id="button_6" class="button_active">6</button>
+                    </div>
+                    <div class="numbers_7to9">
+                        <button (click)="inputNumber(7)" type="button" id="button_7" class="button_active">7</button>
+                        <button (click)="inputNumber(8)" type="button" id="button_8" class="button_active">8</button>
+                        <button (click)="inputNumber(9)" type="button" id="button_9" class="button_active">9</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="operators">
+                <button (click)="inputOperator('+')" type="button" id="button_plus" class="button_active">+</button>
+                <button (click)="inputOperator('-')" type="button" id="button_minus" class="button_active">-</button>
+                <button (click)="inputOperator('×')" type="button" id="button_mult" class="button_active">×</button>
+                <button (click)="inputOperator('÷')" type="button" id="button_divis" class="button_active">÷</button>
+            </div>
+        </div>
+    </fieldset>
+</form>

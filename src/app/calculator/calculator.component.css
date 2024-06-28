@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --buttons-color: rgb(171, 225, 250);
+    --numpad-color: rgb(41,33,33);
+    --calculator-background-specials-color: rgb(55, 60, 78);
+    --default-size-em: 1em;
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    border-radius: 1em;
+    background-color: rgb(55, 60, 78);
+}
+
+.display {
+    width: auto;
+    height: 5em;
+    border-radius: 0.85em 0.85em 0 0;
+    padding: 1em;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 18em;
+}
+
+#display_mini_top {
+    font-size: 1em;
+}
+#display_main {
+    font-size: 1.7em;
+}
+
+.numbers {
+    width: 15em;
+    height: 20em;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: rgb(41,33,33);
+    border-radius: 0 1em;
+}
+
+/* .numbers button {
+    width: 4em;
+    height: 4em;
+    margin: 1em;
+    background-color: rgb(194, 131, 131);
+    border: 1em;
+    border-color: black;
+} */
+
+.operators {
+    width: 5em;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .operators button {
+    width: 4em;
+    height: 4em;
+    margin: 1em;
+    background-color: rgb(194, 131, 131);
+    border: 1em;
+    border-color: black;
+} */
+
+.calculator_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator_buttons button {
+    width: calc(1em * 4 / 1.8);
+    height: calc(1em * 4 / 1.8);
+    margin: calc(1em / 1.8);
+    font-size: 150%;
+    background-color: rgb(171, 225, 250);;
+    border: calc(1em / 1.8);
+    border-color: black;
+    border-radius: calc(1em * 0.4 / 1.8);
+}
+
+.calculator_buttons_left {
+    width: 15em;
+    display: flex;
+    flex-direction: column;
+}
+
+#operationOrder {
+    width: 16em;
+    height: 4em;
+    border: 1em;
+    margin: 1em;
+    border-color: black;
+}
+
+.numbers_1to3, .numbers_4to6, .numbers_7to9, .numbers_0 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.calculator_buttons_left_top {
+    width: 15em;
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.button_active:hover {
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: rgb(100, 124, 134);
+    transform: scale(1.075);
+}
+
+#button_plus {
+    height: calc(8em / 1.44);
+    font-size: 150%;
+}
+
+#button_CE, #button_e {
+    background-color: rgb(75, 100, 125);
+}
+
+#button_CE:hover, #button_e:hover {
+    cursor: not-allowed;
+}
